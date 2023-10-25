@@ -1,0 +1,38 @@
+class Person:
+    def __init__(self, id, phoneNumber):
+        self.id = id
+        self.phoneNumber = phoneNumber
+
+    def printInfo(self):
+        print(f"ID: {self.id}")
+        print(f"Phone Number: {self.phoneNumber}")
+
+class Manager(Person):
+    def __init__(self, id, phoneNumber, skill):
+        super().__init__(id, phoneNumber)
+        self.skill = skill
+
+    def printInfo(self):
+        super().printInfo()
+        print(f"Skill: {self.skill}")
+
+class Employee(Person):
+    def __init__(self, id, phoneNumber, title):
+        super().__init__(id, phoneNumber)
+        self.title = title
+
+    def printInfo(self):
+        super().printInfo()
+        print(f"Title: {self.title}")
+
+# Sample usage
+person1 = Person("12345", "555-555-5555")
+manager1 = Manager("54321", "555-123-4567", "Leadership")
+employee1 = Employee("98765", "555-987-6543", "Developer")
+
+print("Person:")
+person1.printInfo()
+print("\nManager:")
+manager1.printInfo()
+print("\nEmployee:")
+employee1.printInfo()
