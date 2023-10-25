@@ -1,0 +1,30 @@
+import re
+
+# Regular expression pattern for validating email addresses
+email_pattern = r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$'
+
+# List of sample email addresses
+sample_emails = [
+    'john.doe@example.com',
+    'alice_smith123@gmail.com',
+    'user@sub.domain.co.uk',
+    'name@company.org',
+    'jane@example',
+    'invalid-email@.com',
+    'user@domain',
+    'email_with spaces@example.com',
+    'user@.com',
+    '@example.com',
+]
+
+# Function to validate an email address
+def is_valid_email(email):
+    return bool(re.search(email_pattern, email))
+
+# Check the sample email addresses
+for email in sample_emails:
+    if is_valid_email(email):
+        print(f'{email} is a valid email address.')
+    else:
+        print(f'{email} is not a valid email address.')
+
