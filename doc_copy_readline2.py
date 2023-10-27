@@ -1,7 +1,7 @@
-#정규표현힉
+#정규표현식 
 import re 
 
-#원본 로그파일
+#원본 로그파일 
 f=open('c:\\work\\PV3.txt','rt')
 #복사본 파일
 g=open('c:\\work\\PV3_copy.txt','wt',encoding='utf-8')
@@ -11,7 +11,7 @@ g=open('c:\\work\\PV3_copy.txt','wt',encoding='utf-8')
 #파일의 EOF(End Of File)이 아니면 계속 읽도록 한다. 
 line = f.readline()
 while (line != ''):
-    if (re.search("error\d{4}", line)):
+    if (re.search("error", line)):
         g.write(line + "\n")
     line = f.readline()
 

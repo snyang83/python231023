@@ -14,56 +14,58 @@
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="horizontalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>130</y>
+      <width>621</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>첫번째</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>두번째</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>세번째</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>10</y>
-      <width>171</width>
-      <height>61</height>
+      <x>80</x>
+      <y>30</y>
+      <width>641</width>
+      <height>71</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>맑은 고딕</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="text">
      <string>TextLabel</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton">
-    <property name="geometry">
-     <rect>
-      <x>60</x>
-      <y>140</y>
-      <width>75</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>첫번째</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>140</x>
-      <y>140</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>두번째</string>
-    </property>
-   </widget>
-   <widget class="QPushButton" name="pushButton_3">
-    <property name="geometry">
-     <rect>
-      <x>220</x>
-      <y>140</y>
-      <width>75</width>
-      <height>23</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>세번째</string>
     </property>
    </widget>
   </widget>
@@ -73,7 +75,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>21</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
@@ -88,12 +90,28 @@
    <slot>firstClick()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>92</x>
-     <y>174</y>
+     <x>155</x>
+     <y>239</y>
     </hint>
     <hint type="destinationlabel">
-     <x>105</x>
-     <y>277</y>
+     <x>214</x>
+     <y>303</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>secondClick()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>366</x>
+     <y>234</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>413</x>
+     <y>299</y>
     </hint>
    </hints>
   </connection>
@@ -104,35 +122,19 @@
    <slot>thirdClick()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>260</x>
-     <y>178</y>
+     <x>591</x>
+     <y>236</y>
     </hint>
     <hint type="destinationlabel">
-     <x>266</x>
-     <y>275</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>pushButton_2</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>SecondClick()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>173</x>
-     <y>180</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>206</x>
-     <y>273</y>
+     <x>627</x>
+     <y>307</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <slots>
   <slot>firstClick()</slot>
+  <slot>secondClick()</slot>
   <slot>thirdClick()</slot>
-  <slot>SecondClick()</slot>
  </slots>
 </ui>

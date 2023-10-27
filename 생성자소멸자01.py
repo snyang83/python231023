@@ -8,8 +8,10 @@ class MyClass:
     def __del__(self):
         print("Instance is deleted!")
 
-
 #인스턴스 생성
 m = MyClass(5)
-# del m 불필요함...
+#del m 
 print("전체 코드 실행 종료")
+
+
+
